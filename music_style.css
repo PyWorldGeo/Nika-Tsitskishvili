@@ -1,0 +1,113 @@
+
+/* Container */
+.container {
+    padding: 120px 40px 60px;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    z-index: 50;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+
+}
+
+/* Grid for tracks */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+/* Cards */
+.card {
+    background: linear-gradient(to left, rgb(100, 100, 100), rgb(150, 100, 150));
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Audio Player Overlay */
+#audioPlayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#audioPlayer.hidden {
+    display: none;
+}
+
+#audioPlayer audio {
+    width: 60%;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Close Button */
+#closePlayer {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: transform 0.2s ease;
+}
+
+#closePlayer:hover {
+    transform: scale(1.2);
+}
+
+#audioPlayer p {
+    color: white;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#lyrics {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    color: #fff;
+}

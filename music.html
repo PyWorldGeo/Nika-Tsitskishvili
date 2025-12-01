@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="license" content="CC BY-NC 4.0">
+    <title>Music Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music_style.css">
+</head>
+<body>
+
+    <!-- Background -->
+    <div id="shared-background"></div>
+
+    <!-- Audio Player Overlay -->
+    <div id="audioPlayer" class="hidden">
+        <button id="closePlayer">✖</button>
+
+        <!-- ❗ autoplay removed (fixes auto-volume-damping) -->
+        <audio id="musicFrame" controls></audio>
+
+        <p id="nowPlaying"></p>
+        <pre id="lyrics"></pre>
+    </div>
+
+    <div class="container">
+        <h1>მუსიკა</h1>
+
+        <section>
+
+            <div class="grid">
+
+                <div class="card">
+                    <a href="files/music/Ancient Memories.wav">
+                        <p>Ancient Memories</p>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="files/music/Make It Easy.wav">
+                        <p>Make It Easy</p>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="files/music/Keep Trying.wav">
+                        <p>Keep Trying</p>
+                    </a>
+                </div>
+
+
+                <div class="card">
+                    <a href="files/music/The Wind.wav">
+                        <p>The Wind</p>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <br></br><br></br><br></br>
+
+      <footer class="site-footer">
+          © 2025 Nika Tsitskishvili — This website is licensed under
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.
+          Commercial use is prohibited.
+      </footer>
+
+    <script src="music.js"></script>
+    <script src="base.js"></script>
+    <script src="scrypt.js"></script>
+
+</body>
+</html>

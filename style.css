@@ -1,0 +1,234 @@
+
+
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;   /* prevent horizontal scroll */
+  overflow-y: auto;     /* allow normal scrolling */
+  background: linear-gradient(180deg, #fff9c2 0%, #3A89C9 100%);
+}
+
+  /* NAVBAR */
+
+  /* --- Navbar Base Style --- */
+
+.navbar {
+    width: 100%;
+    background: rgba(100,50,100,0.4);
+    backdrop-filter: blur(6px);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.nav-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Default Menu --- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* --- Mobile Toggle Button --- */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- Responsive (Dropdown Menu on Small Screens) --- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(100,50,100,0.4);
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 15px 0;
+        border-radius: 8px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+
+
+  /* --- RESPONSIVE BREAKPOINTS --- */
+
+  /* Tablet */
+  @media (max-width: 900px) {
+    .navbar {
+      justify-content: center;
+    }
+    .navbar a {
+      font-size: 25px;
+      margin-right: 10px;
+    }
+  }
+
+  /* Phones */
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .navbar a {
+      font-size: 22px;
+      margin: 4px 0;
+    }
+  }
+
+  /* Small Phones */
+  @media (max-width: 400px) {
+    .navbar a {
+      font-size: 18px;
+      transform-origin: center;
+    }
+    .navbar a:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  .seasons {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+  .season-layer {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .season-layer.active {
+    opacity: 1;
+  }
+
+  /* SUMMER — Sun + Rain */
+  .summer {
+    background: linear-gradient(180deg, #fff9c2 0%, #3A89C9 100%);
+  }
+  .raindrop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: rgba(255,255,255,0.7);
+    animation: rain linear infinite;
+  }
+  @keyframes rain {
+    0% { transform: translateY(-20vh); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(120vh); opacity: 0; }
+  }
+
+  /* WINTER — Snow */
+  .winter {
+    background: linear-gradient(180deg, #e9f7ff 0%, #3A89C9 100%);
+  }
+  .snow {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: snow-fall linear infinite;
+  }
+  @keyframes snow-fall {
+    0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+    20% { opacity: 1; }
+    100% { transform: translateY(110vh) translateX(40px); opacity: 0.7; }
+  }
+
+  .hero {
+  position: relative;        /* relative to the viewport container */
+  display: flex;
+  flex-direction: column;    /* stack heading and paragraph vertically */
+  align-items: center;       /* horizontal center */
+  justify-content: center;   /* vertical center */
+  height: 80vh;             /* fill full viewport height */
+  text-align: center;        /* center text inside */
+  color: white;              /* text color over background */
+  padding: 20px;             /* optional padding */
+  z-index: 1;                /* ensure above background layers */
+  }
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1, h2 {
+  color: rgb(40,40,40);
+}
+
+.site-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    color: white;
+    font-size: 14px;
+    opacity: 0.85;
+
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.3); /* translucent dark */
+    backdrop-filter: blur(4px);      /* optional, nice glass effect */
+}
+
+.site-footer {
+    position: relative;        /* stays below all content */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 20px 0;
+    margin-top: 60px;          /* space above the footer */
+    opacity: 0.8;
+}
+
+

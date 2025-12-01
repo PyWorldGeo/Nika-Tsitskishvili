@@ -1,0 +1,94 @@
+/* Navbar already included in base.html */
+
+  .contact-container {
+    position: relative;
+    z-index: 1; /* above background */
+    max-width: 600px;
+    margin: 100px auto 50px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .contact-container h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  .contact-container p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  /* Form */
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-container input,
+  .contact-container textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .contact-container button {
+    padding: 12px;
+    font-size: 18px;
+    background: #ffb74d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s;
+  }
+
+  .contact-container button:hover {
+    transform: scale(1.05);
+  }
+
+  /* Social links */
+  .social-links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.25s;
+  }
+
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-container {
+      margin: 80px 20px;
+      padding: 20px;
+    }
+    .contact-container h1 {
+      font-size: 26px;
+    }
+    .contact-container p {
+      font-size: 16px;
+    }
+  }
+
+  .social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2) rotate(10deg);
+}
