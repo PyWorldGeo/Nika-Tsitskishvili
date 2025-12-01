@@ -222,12 +222,11 @@ h1, h2 {
 
 .site-footer {
     position: relative;        /* stays below all content */
-    width: 100%;
+    width: 80%;
     text-align: center;
     color: white;
     font-size: 14px;
     padding: 20px 0;
-    margin-top: 60px;          /* space above the footer */
     opacity: 0.8;
 }
 

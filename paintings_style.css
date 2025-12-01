@@ -71,6 +71,7 @@
 
 .gallery, .title {
   position: relative;
+  margin-bottom: 50px;
   z-index: 50;
 }
 
