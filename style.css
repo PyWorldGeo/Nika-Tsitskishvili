@@ -61,6 +61,8 @@ html, body {
     cursor: pointer;
 }
 
+
+
 /* --- Responsive (Dropdown Menu on Small Screens) --- */
 @media (max-width: 768px) {
     .nav-toggle {
@@ -231,3 +233,21 @@ h1, h2 {
 }
 
 
+#playBtn {
+    position: fixed;
+    left: 50%;               /* center horizontally */
+    bottom: 130px;           /* distance from bottom */
+    transform: translateX(-50%); /* adjust to exact center */
+
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+
+    background-color: rgba(255, 255, 255, 0.9); /* subtle background */
+    color: #000;               /* text color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 20001;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

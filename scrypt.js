@@ -43,3 +43,13 @@ function initSeasons() {
   }
 }
 
+// Get references to button and audio
+const playBtn = document.getElementById("playBtn");
+const dayMusic = document.getElementById("dayMusic");
+
+// Track if music is playing
+let isPlaying = false;
+
+
+
+
