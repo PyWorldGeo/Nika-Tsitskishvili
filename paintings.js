@@ -23,6 +23,7 @@ images.forEach(src => {
   const img = document.createElement("img");
   img.src = src;
   img.alt = "painting";
+  img.loading = "lazy";
   img.addEventListener("click", () => openViewer(src));
   gallery.appendChild(img);
 });
